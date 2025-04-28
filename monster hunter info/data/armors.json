@@ -1,0 +1,162 @@
+[
+  {
+    "id": "1",
+    "name": "Bone Armor",
+    "type": "Low Rank",
+    "defense": 16,
+    "skills": ["Health Boost"],
+    "image": "https://i.imgur.com/BoneArmor.png"
+  },
+  {
+    "id": "2",
+    "name": "Leather Armor",
+    "type": "Low Rank",
+    "defense": 12,
+    "skills": ["Gathering"],
+    "image": "https://i.imgur.com/LeatherArmor.png"
+  },
+  {
+    "id": "3",
+    "name": "Anja Armor",
+    "type": "High Rank",
+    "defense": 62,
+    "skills": ["Attack Boost"],
+    "image": "https://i.imgur.com/AnjaArmor.png"
+  },
+  {
+    "id": "4",
+    "name": "Legiana Armor",
+    "type": "High Rank",
+    "defense": 60,
+    "skills": ["Evade Window"],
+    "image": "https://i.imgur.com/LegianaArmor.png"
+  },
+  {
+    "id": "5",
+    "name": "Rathalos Armor",
+    "type": "High Rank",
+    "defense": 68,
+    "skills": ["Attack Boost", "Weakness Exploit"],
+    "image": "https://i.imgur.com/RathalosArmor.png"
+  },
+  {
+    "id": "6",
+    "name": "Tzitzi Armor",
+    "type": "Low Rank",
+    "defense": 20,
+    "skills": ["Stun Resistance"],
+    "image": "https://i.imgur.com/TzitziArmor.png"
+  },
+  {
+    "id": "7",
+    "name": "Jyura Armor",
+    "type": "Low Rank",
+    "defense": 18,
+    "skills": ["Water Resistance"],
+    "image": "https://i.imgur.com/JyuraArmor.png"
+  },
+  {
+    "id": "8",
+    "name": "Kirin Armor",
+    "type": "High Rank",
+    "defense": 72,
+    "skills": ["Thunder Attack"],
+    "image": "https://i.imgur.com/KirinArmor.png"
+  },
+  {
+    "id": "9",
+    "name": "Diablos Armor",
+    "type": "High Rank",
+    "defense": 70,
+    "skills": ["Tremor Resistance"],
+    "image": "https://i.imgur.com/DiablosArmor.png"
+  },
+  {
+    "id": "10",
+    "name": "Nergigante Armor",
+    "type": "High Rank",
+    "defense": 76,
+    "skills": ["Attack Boost", "Maximum Might"],
+    "image": "https://i.imgur.com/NergiganteArmor.png"
+  },
+  {
+    "id": "11",
+    "name": "Odogaron Armor",
+    "type": "High Rank",
+    "defense": 64,
+    "skills": ["Critical Eye"],
+    "image": "https://i.imgur.com/OdogaronArmor.png"
+  },
+  {
+    "id": "12",
+    "name": "Radobaan Armor",
+    "type": "Low Rank",
+    "defense": 22,
+    "skills": ["Defense Boost"],
+    "image": "https://i.imgur.com/RadobaanArmor.png"
+  },
+  {
+    "id": "13",
+    "name": "Paolumu Armor",
+    "type": "Low Rank",
+    "defense": 18,
+    "skills": ["Windproof"],
+    "image": "https://i.imgur.com/PaolumuArmor.png"
+  },
+  {
+    "id": "14",
+    "name": "Kushala Armor",
+    "type": "Elder Dragon",
+    "defense": 80,
+    "skills": ["Windproof", "Evade Extender"],
+    "image": "https://i.imgur.com/KushalaArmor.png"
+  },
+  {
+    "id": "15",
+    "name": "Teostra Armor",
+    "type": "Elder Dragon",
+    "defense": 80,
+    "skills": ["Master's Touch"],
+    "image": "https://i.imgur.com/TeostraArmor.png"
+  },
+  {
+    "id": "16",
+    "name": "Vaal Hazak Armor",
+    "type": "Elder Dragon",
+    "defense": 78,
+    "skills": ["Recovery Up"],
+    "image": "https://i.imgur.com/VaalHazakArmor.png"
+  },
+  {
+    "id": "17",
+    "name": "Dodogama Armor",
+    "type": "Low Rank",
+    "defense": 20,
+    "skills": ["Blast Resistance"],
+    "image": "https://i.imgur.com/DodogamaArmor.png"
+  },
+  {
+    "id": "18",
+    "name": "Uragaan Armor",
+    "type": "High Rank",
+    "defense": 68,
+    "skills": ["Guard Up"],
+    "image": "https://i.imgur.com/UragaanArmor.png"
+  },
+  {
+    "id": "19",
+    "name": "Tobi-Kadachi Armor",
+    "type": "Low Rank",
+    "defense": 18,
+    "skills": ["Thunder Resistance"],
+    "image": "https://i.imgur.com/TobiKadachiArmor.png"
+  },
+  {
+    "id": "20",
+    "name": "Great Jagras Armor",
+    "type": "Low Rank",
+    "defense": 16,
+    "skills": ["Hunger Resistance"],
+    "image": "https://i.imgur.com/GreatJagrasArmor.png"
+  }
+]
