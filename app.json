@@ -1,41 +1,35 @@
 {
   "expo": {
-    "name": "monster-hunter-info",
+    "name": "Monster Hunter Info",
     "slug": "monster-hunter-info",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "icon": "./assets/images/Icon MH.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/images/Icon MH.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0D1117"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.phuriphat.monsterhunterinfo",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/Icon MH.png",
+        "backgroundColor": "#0D1117"
+      },
+      "versionCode": 1
+    },
+    "extra": {
+      "eas": {
+        "projectId": "40deb8d7-6ae8-4ef6-897c-ee56509b5946"
       }
     },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
-    },
-    "plugins": [
-      "expo-router",
-      [
-        "expo-splash-screen",
-        {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ]
-    ],
-    "experiments": {
-      "typedRoutes": true
-    }
+    "owner": "phuriphat_555"
   }
 }

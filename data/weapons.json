@@ -1,0 +1,162 @@
+[
+  {
+    "id": "1",
+    "name": "Buster Sword",
+    "type": "Great Sword",
+    "attack": 768,
+    "element": "None",
+    "image": "https://i.imgur.com/BusterSword.png"
+  },
+  {
+    "id": "2",
+    "name": "Iron Bow",
+    "type": "Bow",
+    "attack": 156,
+    "element": "None",
+    "image": "https://i.imgur.com/IronBow.png"
+  },
+  {
+    "id": "3",
+    "name": "Wyvern Blade 'Holly'",
+    "type": "Long Sword",
+    "attack": 792,
+    "element": "Fire",
+    "image": "https://i.imgur.com/WyvernBladeHolly.png"
+  },
+  {
+    "id": "4",
+    "name": "Diablos Shatterer",
+    "type": "Hammer",
+    "attack": 1196,
+    "element": "Ice",
+    "image": "https://i.imgur.com/DiablosShatterer.png"
+  },
+  {
+    "id": "5",
+    "name": "Blacksteel Axe",
+    "type": "Switch Axe",
+    "attack": 660,
+    "element": "Dragon",
+    "image": "https://i.imgur.com/BlacksteelAxe.png"
+  },
+  {
+    "id": "6",
+    "name": "Kulu Pick",
+    "type": "Hammer",
+    "attack": 780,
+    "element": "Water",
+    "image": "https://i.imgur.com/KuluPick.png"
+  },
+  {
+    "id": "7",
+    "name": "Hunter's Knife",
+    "type": "Sword and Shield",
+    "attack": 154,
+    "element": "None",
+    "image": "https://i.imgur.com/HuntersKnife.png"
+  },
+  {
+    "id": "8",
+    "name": "Blooming Arch",
+    "type": "Bow",
+    "attack": 144,
+    "element": "Poison",
+    "image": "https://i.imgur.com/BloomingArch.png"
+  },
+  {
+    "id": "9",
+    "name": "Metal Bagpipes",
+    "type": "Hunting Horn",
+    "attack": 672,
+    "element": "None",
+    "image": "https://i.imgur.com/MetalBagpipes.png"
+  },
+  {
+    "id": "10",
+    "name": "Azure Star Blade",
+    "type": "Long Sword",
+    "attack": 693,
+    "element": "Ice",
+    "image": "https://i.imgur.com/AzureStarBlade.png"
+  },
+  {
+    "id": "11",
+    "name": "Rathalos Firesword",
+    "type": "Sword and Shield",
+    "attack": 220,
+    "element": "Fire",
+    "image": "https://i.imgur.com/RathalosFiresword.png"
+  },
+  {
+    "id": "12",
+    "name": "Jyura Glaive",
+    "type": "Insect Glaive",
+    "attack": 620,
+    "element": "Water",
+    "image": "https://i.imgur.com/JyuraGlaive.png"
+  },
+  {
+    "id": "13",
+    "name": "Kirin Thundersword",
+    "type": "Great Sword",
+    "attack": 720,
+    "element": "Thunder",
+    "image": "https://i.imgur.com/KirinThundersword.png"
+  },
+  {
+    "id": "14",
+    "name": "Lightning Blitz",
+    "type": "Light Bowgun",
+    "attack": 180,
+    "element": "Thunder",
+    "image": "https://i.imgur.com/LightningBlitz.png"
+  },
+  {
+    "id": "15",
+    "name": "Teostra's Flame",
+    "type": "Dual Blades",
+    "attack": 250,
+    "element": "Fire",
+    "image": "https://i.imgur.com/TeostrasFlame.png"
+  },
+  {
+    "id": "16",
+    "name": "Uragaan Hammer",
+    "type": "Hammer",
+    "attack": 1040,
+    "element": "Blast",
+    "image": "https://i.imgur.com/UragaanHammer.png"
+  },
+  {
+    "id": "17",
+    "name": "Rex Slasher",
+    "type": "Great Sword",
+    "attack": 1056,
+    "element": "Dragon",
+    "image": "https://i.imgur.com/RexSlasher.png"
+  },
+  {
+    "id": "18",
+    "name": "Bone Lance",
+    "type": "Lance",
+    "attack": 460,
+    "element": "None",
+    "image": "https://i.imgur.com/BoneLance.png"
+  },
+  {
+    "id": "19",
+    "name": "Dragonbone Bow",
+    "type": "Bow",
+    "attack": 180,
+    "element": "Dragon",
+    "image": "https://i.imgur.com/DragonboneBow.png"
+  },
+  {
+    "id": "20",
+    "name": "Nergal Reaper",
+    "type": "Insect Glaive",
+    "attack": 651,
+    "element": "Dragon",
+    "image": "https://i.imgur.com/NergalReaper.png"
+  }
+]

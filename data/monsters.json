@@ -1,0 +1,194 @@
+[
+  {
+    "id": "1",
+    "name": "Rathalos",
+    "image": "https://i.imgur.com/4ytrcNq.png",
+    "description": "King of the Skies, fire-breathing wyvern.",
+    "weaknesses": ["Dragon", "Thunder"],
+    "habitat": "Ancient Forest"
+  },
+  {
+    "id": "2",
+    "name": "Anjanath",
+    "image": "https://i.imgur.com/Anj1234.png",
+    "description": "Brute wyvern with devastating flames.",
+    "weaknesses": ["Water", "Thunder"],
+    "habitat": "Ancient Forest"
+  },
+  {
+    "id": "3",
+    "name": "Nergigante",
+    "image": "https://i.imgur.com/Nergigante.png",
+    "description": "Elder Dragon eater, covered in deadly spikes.",
+    "weaknesses": ["Dragon", "Thunder"],
+    "habitat": "Elder's Recess"
+  },
+  {
+    "id": "4",
+    "name": "Diablos",
+    "image": "https://i.imgur.com/Diablos.png",
+    "description": "Territorial wyvern of the Wildspire Waste.",
+    "weaknesses": ["Ice", "Dragon"],
+    "habitat": "Wildspire Waste"
+  },
+  {
+    "id": "5",
+    "name": "Legiana",
+    "image": "https://i.imgur.com/Legiana.png",
+    "description": "Flying wyvern that chills the air itself.",
+    "weaknesses": ["Fire", "Thunder"],
+    "habitat": "Coral Highlands"
+  },
+  {
+    "id": "6",
+    "name": "Tobi-Kadachi",
+    "image": "https://i.imgur.com/TobiKadachi.png",
+    "description": "Fanged wyvern that discharges electricity.",
+    "weaknesses": ["Water"],
+    "habitat": "Ancient Forest"
+  },
+  {
+    "id": "7",
+    "name": "Great Jagras",
+    "image": "https://i.imgur.com/GreatJagras.png",
+    "description": "Gluttonous monster that swallows prey whole.",
+    "weaknesses": ["Fire", "Thunder"],
+    "habitat": "Ancient Forest"
+  },
+  {
+    "id": "8",
+    "name": "Pukei-Pukei",
+    "image": "https://i.imgur.com/PukeiPukei.png",
+    "description": "Toxic wyvern with a versatile tongue.",
+    "weaknesses": ["Thunder"],
+    "habitat": "Ancient Forest"
+  },
+  {
+    "id": "9",
+    "name": "Kulu-Ya-Ku",
+    "image": "https://i.imgur.com/KuluYaKu.png",
+    "description": "Bird wyvern that uses tools to attack.",
+    "weaknesses": ["Water"],
+    "habitat": "Ancient Forest"
+  },
+  {
+    "id": "10",
+    "name": "Barroth",
+    "image": "https://i.imgur.com/Barroth.png",
+    "description": "Armored monster known for charging attacks.",
+    "weaknesses": ["Fire", "Ice"],
+    "habitat": "Wildspire Waste"
+  },
+  {
+    "id": "11",
+    "name": "Paolumu",
+    "image": "https://i.imgur.com/Paolumu.png",
+    "description": "Fluffy bat-like monster that floats in the air.",
+    "weaknesses": ["Fire"],
+    "habitat": "Coral Highlands"
+  },
+  {
+    "id": "12",
+    "name": "Tzitzi-Ya-Ku",
+    "image": "https://i.imgur.com/TzitziYaKu.png",
+    "description": "Emits blinding flashes to stun prey.",
+    "weaknesses": ["Water", "Ice"],
+    "habitat": "Coral Highlands"
+  },
+  {
+    "id": "13",
+    "name": "Jyuratodus",
+    "image": "https://i.imgur.com/Jyuratodus.png",
+    "description": "Mud-dwelling leviathan.",
+    "weaknesses": ["Thunder"],
+    "habitat": "Wildspire Waste"
+  },
+  {
+    "id": "14",
+    "name": "Radobaan",
+    "image": "https://i.imgur.com/Radobaan.png",
+    "description": "Rolls over prey with bone armor.",
+    "weaknesses": ["Dragon"],
+    "habitat": "Rotten Vale"
+  },
+  {
+    "id": "15",
+    "name": "Uragaan",
+    "image": "https://i.imgur.com/Uragaan.png",
+    "description": "Rolls like a living boulder.",
+    "weaknesses": ["Water"],
+    "habitat": "Elder's Recess"
+  },
+  {
+    "id": "16",
+    "name": "Dodogama",
+    "image": "https://i.imgur.com/Dodogama.png",
+    "description": "Packs explosive minerals in its mouth.",
+    "weaknesses": ["Dragon"],
+    "habitat": "Elder's Recess"
+  },
+  {
+    "id": "17",
+    "name": "Kirin",
+    "image": "https://i.imgur.com/Kirin.png",
+    "description": "Elder Dragon resembling a unicorn.",
+    "weaknesses": ["Fire"],
+    "habitat": "Coral Highlands"
+  },
+  {
+    "id": "18",
+    "name": "Vaal Hazak",
+    "image": "https://i.imgur.com/VaalHazak.png",
+    "description": "Spreads effluvium and death.",
+    "weaknesses": ["Fire", "Dragon"],
+    "habitat": "Rotten Vale"
+  },
+  {
+    "id": "19",
+    "name": "Teostra",
+    "image": "https://i.imgur.com/Teostra.png",
+    "description": "King of Fire.",
+    "weaknesses": ["Water", "Ice"],
+    "habitat": "Elder's Recess"
+  },
+  {
+    "id": "20",
+    "name": "Kushala Daora",
+    "image": "https://i.imgur.com/KushalaDaora.png",
+    "description": "Elder Dragon that manipulates storms.",
+    "weaknesses": ["Thunder", "Dragon"],
+    "habitat": "Elder's Recess"
+  },
+  {
+    "id": "21",
+    "name": "Xeno'jiiva",
+    "image": "../assets/images/monsters/MHW_Xeno%27jiiva_Icon.webp",
+    "description": "Elder Dragon born from the energy of the Elder's Recess.",
+    "weaknesses": ["Dragon", "Poison"],
+    "habitat": "Elder's Recess"
+  },
+  {
+    "id": "22",
+    "name": "Beotodus",
+    "image": "../assets/images/monsters/MHWI_Beotodus_Icon.webp",
+    "description": "Piscine wyvern that swims through snow.",
+    "weaknesses": ["Fire", "Thunder"],
+    "habitat": "Hoarfrost Reach"
+  },
+  {
+    "id": "23",
+    "name": "Banbaro",
+    "image": "../assets/images/monsters/MHWI_Banbaro_Icon.webp",
+    "description": "Massive brute wyvern with huge horns.",
+    "weaknesses": ["Fire"],
+    "habitat": "Hoarfrost Reach"
+  },
+  {
+    "id": "24",
+    "name": "Velkhana",
+    "image": "../assets/images/monsters/MHWI_Velkhana_Icon.webp",
+    "description": "Elder Dragon that manipulates ice.",
+    "weaknesses": ["Fire"],
+    "habitat": "Hoarfrost Reach"
+  }
+]

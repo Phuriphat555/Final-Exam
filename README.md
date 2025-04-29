@@ -1,50 +1,105 @@
-# Welcome to your Expo app 👋
+# Monster Hunter Info
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A comprehensive Monster Hunter World companion app built with React Native and Expo. This app provides detailed information about monsters, weapons, and armor sets from Monster Hunter World.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Browse and search monsters
+- View detailed monster information including:
+  - Weaknesses
+  - Habitats
+  - Rewards
+- Explore weapons and armor sets
+- Dark mode UI optimized for gaming sessions
+- Offline data caching (coming soon)
 
-   ```bash
-   npm install
-   ```
+## Tech Stack
 
-2. Start the app
+- React Native with Expo
+- TypeScript
+- Expo Router for navigation
+- Axios for API calls
+- React Native Paper for UI components
 
-   ```bash
-    npx expo start
-   ```
+## Prerequisites
 
-In the output, you'll find options to open the app in a
+- Node.js (v14 or newer)
+- npm or yarn
+- Expo CLI (`npm install -g expo-cli`)
+- Android Studio (for Android development)
+- Xcode (for iOS development, Mac only)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Installation
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+1. Clone the repository:
 ```bash
-npm run reset-project
+git clone https://github.com/yourusername/monster-hunter-info.git
+cd monster-hunter-info
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-## Learn more
+3. Start the development server:
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## Building APK
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Development Build
+```bash
+eas build --profile development --platform android
+```
 
-## Join the community
+### Preview Build (APK)
+```bash
+eas build --profile preview --platform android
+```
 
-Join our community of developers creating universal apps.
+### Production Build (AAB)
+```bash
+eas build --profile production --platform android
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Project Structure
+
+```
+monster-hunter-info/
+├── app/                    # Main application code
+│   ├── (tabs)/            # Tab navigation screens
+│   ├── monsters/          # Monster-related screens
+│   └── _layout.tsx        # Root layout configuration
+├── assets/                # Static assets
+├── components/            # Reusable components
+├── constants/             # Constants and configuration
+├── hooks/                 # Custom React hooks
+└── theme/                 # Theme configuration
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Monster Hunter World API
+- Expo team for the amazing framework
+- React Native community
+
+## Contact
+
+Your Name - [@yourusername](https://twitter.com/yourusername)
+Project Link: [https://github.com/yourusername/monster-hunter-info](https://github.com/yourusername/monster-hunter-info)
