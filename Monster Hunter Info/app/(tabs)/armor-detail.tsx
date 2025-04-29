@@ -1,6 +1,4 @@
 "use client"
-
-import React from "react"
 import { StyleSheet, Image, ScrollView, View, TouchableOpacity, StatusBar } from "react-native"
 import { useLocalSearchParams, useRouter } from "expo-router"
 import { ThemedText } from "@/components/ThemedText"
@@ -39,7 +37,7 @@ export default function ArmorDetailScreen() {
         style={styles.backgroundImage}
       />
       <LinearGradient colors={["rgba(0,0,0,0.9)", "rgba(0,0,0,0.85)"]} style={styles.overlay}>
-        <TouchableOpacity style={styles.backButton} onPress={() => router.replace('/(tabs)/armorsets')}>
+        <TouchableOpacity style={styles.backButton} onPress={() => router.replace("/(tabs)/armorsets")}>
           <ThemedText style={styles.backButtonText}>← Back</ThemedText>
         </TouchableOpacity>
 
@@ -52,7 +50,9 @@ export default function ArmorDetailScreen() {
                 resizeMode="contain"
               />
             </View>
-            <ThemedText type="title" style={styles.armorName}>{armor.name}</ThemedText>
+            <ThemedText type="title" style={styles.armorName}>
+              {armor.name}
+            </ThemedText>
             <View style={styles.typeContainer}>
               <ThemedText style={styles.armorType}>{armor.type}</ThemedText>
               <View style={styles.rarityContainer}>
@@ -190,17 +190,21 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     borderRadius: 10,
-    borderWidth: 3,
+    borderWidth: 2,
     borderColor: "#FFD700",
     overflow: "hidden",
     marginBottom: 15,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#1A1A1A",
+    backgroundColor: "#2A2A2A",
   },
   armorImage: {
     width: 140,
     height: 140,
+    borderRadius: 10,
+    borderWidth: 2,
+    borderColor: "#FFD700",
+    backgroundColor: "#2A2A2A",
   },
   armorName: {
     fontSize: 32,

@@ -422,7 +422,9 @@ export default function ArmorSetsScreen() {
       <LinearGradient colors={["rgba(13, 17, 23, 0.95)", "rgba(13, 17, 23, 0.85)"]} style={styles.overlay} />
 
       <View style={styles.header}>
-        <ThemedText type="title" style={styles.title}>Armor Sets</ThemedText>
+        <ThemedText type="title" style={styles.title}>
+          Armor Sets
+        </ThemedText>
         <ThemedText style={styles.subtitle}>Forge Your Defense</ThemedText>
       </View>
 
@@ -492,24 +494,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   imageContainer: {
-    width: 150,
-    height: 150,
-    borderRadius: 10,
+    width: 110,
+    height: 110,
+    backgroundColor: "#2A2A2A",
     borderWidth: 2,
     borderColor: "#FFD700",
-    overflow: "hidden",
-    marginBottom: 15,
+    borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#2A2A2A",
+    overflow: "hidden",
   },
   armorImage: {
-    width: 140,
-    height: 140,
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: "#FFD700",
-    backgroundColor: "#2A2A2A",
+    width: 100,
+    height: 100,
   },
   armorInfo: {
     flex: 1,

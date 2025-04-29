@@ -4,6 +4,7 @@ import { useLocalSearchParams, useRouter } from "expo-router"
 import { ThemedText } from "@/components/ThemedText"
 import { ThemedView } from "@/components/ThemedView"
 import { LinearGradient } from "expo-linear-gradient"
+import { useState } from "react"
 
 interface Monster {
   id: number
@@ -17,39 +18,51 @@ const monsterImages: Record<string, any> = {
   "Great Jagras": require("../../assets/images/monsters/MHW_Great_Jagras_Icon_11zon.png"),
   "Kulu-Ya-Ku": require("../../assets/images/monsters/MHW_Kulu-Ya-Ku_Icon_11zon.png"),
   "Pukei-Pukei": require("../../assets/images/monsters/MHW_Pukei-Pukei_Icon_11zon.png"),
-  "Barroth": require("../../assets/images/monsters/MHW_Barroth_Icon_11zon.png"),
-  "Jyuratodus": require("../../assets/images/monsters/MHW_Jyuratodus_Icon_11zon.png"),
+  Barroth: require("../../assets/images/monsters/MHW_Barroth_Icon_11zon.png"),
+  Jyuratodus: require("../../assets/images/monsters/MHW_Jyuratodus_Icon_11zon.png"),
   "Tobi-Kadachi": require("../../assets/images/monsters/MHW_Tobi-Kadachi_Icon_11zon.png"),
-  "Anjanath": require("../../assets/images/monsters/MHW_Anjanath_Icon_11zon.png"),
-  "Rathian": require("../../assets/images/monsters/MHW_Rathian_Icon_11zon.png"),
+  Anjanath: require("../../assets/images/monsters/MHW_Anjanath_Icon_11zon.png"),
+  Rathian: require("../../assets/images/monsters/MHW_Rathian_Icon_11zon.png"),
   "Tzitzi-Ya-Ku": require("../../assets/images/monsters/MHW_Tzitzi-Ya-Ku_Icon_11zon.png"),
-  "Paolumu": require("../../assets/images/monsters/MHW_Paolumu_Icon_11zon.png"),
-  "Legiana": require("../../assets/images/monsters/MHW_Legiana_Icon_11zon.png"),
-  "Odogaron": require("../../assets/images/monsters/MHW_Odogaron_Icon_11zon.png"),
-  "Rathalos": require("../../assets/images/monsters/MHW_Rathalos_Icon_11zon.png"),
-  "Diablos": require("../../assets/images/monsters/MHW_Diablos_Icon_11zon.png"),
-  "Kirin": require("../../assets/images/monsters/MHW_Kirin_Icon_11zon.png"),
+  Paolumu: require("../../assets/images/monsters/MHW_Paolumu_Icon_11zon.png"),
+  Legiana: require("../../assets/images/monsters/MHW_Legiana_Icon_11zon.png"),
+  Odogaron: require("../../assets/images/monsters/MHW_Odogaron_Icon_11zon.png"),
+  Rathalos: require("../../assets/images/monsters/MHW_Rathalos_Icon_11zon.png"),
+  Diablos: require("../../assets/images/monsters/MHW_Diablos_Icon_11zon.png"),
+  Kirin: require("../../assets/images/monsters/MHW_Kirin_Icon_11zon.png"),
   "Zorah Magdaros": require("../../assets/images/monsters/MHW_Zorah_Magdaros_Icon_11zon.png"),
-  "Nergigante": require("../../assets/images/monsters/MHW_Nergigante_Icon_11zon.jpeg"),
-  "Teostra": require("../../assets/images/monsters/MHW_Teostra_Icon_11zon.png"),
+  Nergigante: require("../../assets/images/monsters/MHW_Nergigante_Icon_11zon.jpeg"),
+  Teostra: require("../../assets/images/monsters/MHW_Teostra_Icon_11zon.png"),
   "Kushala Daora": require("../../assets/images/monsters/MHW_Kushala_Daora_Icon_11zon.png"),
   "Vaal Hazak": require("../../assets/images/monsters/MHW_Vaal_Hazak_Icon_11zon.png"),
-  "Xeno'jiiva": require("../../assets/images/monsters/MHW_Xeno%27jiiva_Icon_11zon.png"),
-  "Deviljho": require("../../assets/images/monsters/MHW_Deviljho_Icon_11zon.png"),
+  "Xeno'jiiva": require("../../assets/images/monsters/MHW_Xeno_jiiva_Icon_11zon.png"),
+  Deviljho: require("../../assets/images/monsters/MHW_Deviljho_Icon_11zon.png"),
   "Kulve Taroth": require("../../assets/images/monsters/MHW_Kulve_Taroth_Icon_11zon.png"),
-  "Lunastra": require("../../assets/images/monsters/MHW_Lunastra_Icon_11zon.png"),
-  "Behemoth": require("../../assets/images/monsters/MHW_Behemoth_Icon_11zon.png"),
-  "Leshen": require("../../assets/images/monsters/MHW_Leshen_Icon_11zon.png"),
+  Lunastra: require("../../assets/images/monsters/MHW_Lunastra_Icon_11zon.png"),
+  Behemoth: require("../../assets/images/monsters/MHW_Behemoth_Icon_11zon.png"),
+  Leshen: require("../../assets/images/monsters/MHW_Leshen_Icon_11zon.png"),
   "Ancient Leshen": require("../../assets/images/monsters/MHW_Ancient_Leshen_Icon_11zon.png"),
-  "Beotodus": require("../../assets/images/monsters/MHWI_Beotodus_Icon_11zon.png"),
-  "Banbaro": require("../../assets/images/monsters/MHWI_Banbaro_Icon_11zon.png"),
-  "Velkhana": require("../../assets/images/monsters/MHWI_Velkhana_Icon_11zon.png"),
-};
+  Beotodus: require("../../assets/images/monsters/MHWI_Beotodus_Icon_11zon.png"),
+  Banbaro: require("../../assets/images/monsters/MHWI_Banbaro_Icon_11zon.png"),
+  Velkhana: require("../../assets/images/monsters/MHWI_Velkhana_Icon_11zon.png"),
+}
+
+// Helper function to safely get monster image
+const getMonsterImage = (monsterName: string) => {
+  try {
+    return monsterImages[monsterName]
+  } catch (error) {
+    console.log(`Error loading image for ${monsterName}:`, error)
+    return require("../../assets/images/monsters/MHW_Great_Jagras_Icon_11zon.png")
+  }
+}
 
 export default function MonsterDetailScreen() {
   const params = useLocalSearchParams()
   const router = useRouter()
   const monster: Monster = JSON.parse(params.monster as string)
+  const [imageLoading, setImageLoading] = useState(true)
+  const [imageError, setImageError] = useState(false)
 
   // Monster descriptions - in a real app, this would come from your data
   const descriptions: Record<number, string> = {
@@ -129,7 +142,7 @@ export default function MonsterDetailScreen() {
         style={styles.backgroundImage}
       />
       <LinearGradient colors={["rgba(0,0,0,0.9)", "rgba(0,0,0,0.85)"]} style={styles.overlay}>
-        <TouchableOpacity style={styles.backButton} onPress={() => router.replace('/(tabs)/explore')}>
+        <TouchableOpacity style={styles.backButton} onPress={() => router.replace("/(tabs)/explore")}>
           <ThemedText style={styles.backButtonText}>← Back</ThemedText>
         </TouchableOpacity>
 
@@ -137,11 +150,30 @@ export default function MonsterDetailScreen() {
           <View style={styles.header}>
             <View style={styles.imageContainer}>
               <Image
-                source={monsterImages[monster.name]}
-                style={styles.monsterImage}
+                source={getMonsterImage(monster.name)}
+                style={[styles.monsterImage, imageLoading && styles.hiddenImage]}
+                resizeMode="contain"
+                onLoadStart={() => setImageLoading(true)}
+                onLoad={() => setImageLoading(false)}
+                onError={() => {
+                  setImageLoading(false)
+                  setImageError(true)
+                }}
               />
+              {imageLoading && (
+                <View style={styles.imageLoadingContainer}>
+                  <ThemedText>Loading...</ThemedText>
+                </View>
+              )}
+              {imageError && (
+                <View style={styles.imageErrorContainer}>
+                  <ThemedText>Failed to load image</ThemedText>
+                </View>
+              )}
             </View>
-            <ThemedText type="title" style={styles.monsterName}>{monster.name}</ThemedText>
+            <ThemedText type="title" style={styles.monsterName}>
+              {monster.name}
+            </ThemedText>
             <View style={styles.typeContainer}>
               <ThemedText style={styles.monsterType}>{monster.type}</ThemedText>
             </View>
@@ -258,14 +290,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#2A2A2A",
+    position: 'relative',
   },
   monsterImage: {
-    width: 140,
-    height: 140,
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: "#FFD700",
-    backgroundColor: "#2A2A2A",
+    width: '100%',
+    height: '100%',
   },
   monsterName: {
     fontSize: 32,
@@ -333,5 +362,28 @@ const styles = StyleSheet.create({
     color: "#E6E6E6",
     fontSize: 14,
     fontWeight: "600",
+  },
+  hiddenImage: {
+    opacity: 0,
+  },
+  imageLoadingContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(42, 42, 42, 0.5)',
+  },
+  imageErrorContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(255, 0, 0, 0.1)',
   },
 })

@@ -200,40 +200,52 @@ const monsterImages: Record<string, any> = {
   "Great Jagras": require("../../assets/images/monsters/MHW_Great_Jagras_Icon_11zon.png"),
   "Kulu-Ya-Ku": require("../../assets/images/monsters/MHW_Kulu-Ya-Ku_Icon_11zon.png"),
   "Pukei-Pukei": require("../../assets/images/monsters/MHW_Pukei-Pukei_Icon_11zon.png"),
-  "Barroth": require("../../assets/images/monsters/MHW_Barroth_Icon_11zon.png"),
-  "Jyuratodus": require("../../assets/images/monsters/MHW_Jyuratodus_Icon_11zon.png"),
+  Barroth: require("../../assets/images/monsters/MHW_Barroth_Icon_11zon.png"),
+  Jyuratodus: require("../../assets/images/monsters/MHW_Jyuratodus_Icon_11zon.png"),
   "Tobi-Kadachi": require("../../assets/images/monsters/MHW_Tobi-Kadachi_Icon_11zon.png"),
-  "Anjanath": require("../../assets/images/monsters/MHW_Anjanath_Icon_11zon.png"),
-  "Rathian": require("../../assets/images/monsters/MHW_Rathian_Icon_11zon.png"),
+  Anjanath: require("../../assets/images/monsters/MHW_Anjanath_Icon_11zon.png"),
+  Rathian: require("../../assets/images/monsters/MHW_Rathian_Icon_11zon.png"),
   "Tzitzi-Ya-Ku": require("../../assets/images/monsters/MHW_Tzitzi-Ya-Ku_Icon_11zon.png"),
-  "Paolumu": require("../../assets/images/monsters/MHW_Paolumu_Icon_11zon.png"),
-  "Legiana": require("../../assets/images/monsters/MHW_Legiana_Icon_11zon.png"),
-  "Odogaron": require("../../assets/images/monsters/MHW_Odogaron_Icon_11zon.png"),
-  "Rathalos": require("../../assets/images/monsters/MHW_Rathalos_Icon_11zon.png"),
-  "Diablos": require("../../assets/images/monsters/MHW_Diablos_Icon_11zon.png"),
-  "Kirin": require("../../assets/images/monsters/MHW_Kirin_Icon_11zon.png"),
+  Paolumu: require("../../assets/images/monsters/MHW_Paolumu_Icon_11zon.png"),
+  Legiana: require("../../assets/images/monsters/MHW_Legiana_Icon_11zon.png"),
+  Odogaron: require("../../assets/images/monsters/MHW_Odogaron_Icon_11zon.png"),
+  Rathalos: require("../../assets/images/monsters/MHW_Rathalos_Icon_11zon.png"),
+  Diablos: require("../../assets/images/monsters/MHW_Diablos_Icon_11zon.png"),
+  Kirin: require("../../assets/images/monsters/MHW_Kirin_Icon_11zon.png"),
   "Zorah Magdaros": require("../../assets/images/monsters/MHW_Zorah_Magdaros_Icon_11zon.png"),
-  "Nergigante": require("../../assets/images/monsters/MHW_Nergigante_Icon_11zon.jpeg"),
-  "Teostra": require("../../assets/images/monsters/MHW_Teostra_Icon_11zon.png"),
+  Nergigante: require("../../assets/images/monsters/MHW_Nergigante_Icon_11zon.jpeg"),
+  Teostra: require("../../assets/images/monsters/MHW_Teostra_Icon_11zon.png"),
   "Kushala Daora": require("../../assets/images/monsters/MHW_Kushala_Daora_Icon_11zon.png"),
   "Vaal Hazak": require("../../assets/images/monsters/MHW_Vaal_Hazak_Icon_11zon.png"),
-  //   "Xeno'jiiva": require("../../assets/images/monsters/MHW_Xeno%27jiiva_Icon_11zon.png"),
-  "Deviljho": require("../../assets/images/monsters/MHW_Deviljho_Icon_11zon.png"),
+  "Xeno'jiiva": require("../../assets/images/monsters/MHW_Xeno_jiiva_Icon_11zon.png"),
+  Deviljho: require("../../assets/images/monsters/MHW_Deviljho_Icon_11zon.png"),
   "Kulve Taroth": require("../../assets/images/monsters/MHW_Kulve_Taroth_Icon_11zon.png"),
-  "Lunastra": require("../../assets/images/monsters/MHW_Lunastra_Icon_11zon.png"),
-  "Behemoth": require("../../assets/images/monsters/MHW_Behemoth_Icon_11zon.png"),
-  "Leshen": require("../../assets/images/monsters/MHW_Leshen_Icon_11zon.png"),
+  Lunastra: require("../../assets/images/monsters/MHW_Lunastra_Icon_11zon.png"),
+  Behemoth: require("../../assets/images/monsters/MHW_Behemoth_Icon_11zon.png"),
+  Leshen: require("../../assets/images/monsters/MHW_Leshen_Icon_11zon.png"),
   "Ancient Leshen": require("../../assets/images/monsters/MHW_Ancient_Leshen_Icon_11zon.png"),
-  "Beotodus": require("../../assets/images/monsters/MHWI_Beotodus_Icon_11zon.png"),
-  "Banbaro": require("../../assets/images/monsters/MHWI_Banbaro_Icon_11zon.png"),
-  "Velkhana": require("../../assets/images/monsters/MHWI_Velkhana_Icon_11zon.png"),
-};
+  Beotodus: require("../../assets/images/monsters/MHWI_Beotodus_Icon_11zon.png"),
+  Banbaro: require("../../assets/images/monsters/MHWI_Banbaro_Icon_11zon.png"),
+  Velkhana: require("../../assets/images/monsters/MHWI_Velkhana_Icon_11zon.png"),
+}
+
+// Helper function to safely get monster image
+const getMonsterImage = (monsterName: string) => {
+  try {
+    return monsterImages[monsterName]
+  } catch (error) {
+    console.log(`Error loading image for ${monsterName}:`, error)
+    return require("../../assets/images/monsters/MHW_Great_Jagras_Icon_11zon.png")
+  }
+}
 
 export default function ExploreScreen() {
   const router = useRouter()
   const [isLoading, setIsLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState("")
   const [filteredMonsters, setFilteredMonsters] = useState(monstersData)
+  const [imageLoadingStates, setImageLoadingStates] = useState<Record<number, boolean>>({})
+  const [imageErrorStates, setImageErrorStates] = useState<Record<number, boolean>>({})
 
   // Filter monsters based on search query
   useEffect(() => {
@@ -256,22 +268,50 @@ export default function ExploreScreen() {
     return () => clearTimeout(timer)
   }, [])
 
+  const handleImageLoadStart = (monsterId: number) => {
+    setImageLoadingStates(prev => ({ ...prev, [monsterId]: true }))
+  }
+
+  const handleImageLoad = (monsterId: number) => {
+    setImageLoadingStates(prev => ({ ...prev, [monsterId]: false }))
+  }
+
+  const handleImageError = (monsterId: number) => {
+    setImageLoadingStates(prev => ({ ...prev, [monsterId]: false }))
+    setImageErrorStates(prev => ({ ...prev, [monsterId]: true }))
+  }
+
   const renderMonsterItem = ({ item }: { item: Monster }) => (
     <Pressable
       style={styles.monsterCard}
       onPress={() =>
         router.push({
           pathname: "/(tabs)/monster-detail",
-          params: { monster: JSON.stringify(item) },
+          params: { monster: JSON.stringify({ ...item, imageUrl: getMonsterImage(item.name) }) },
         })
       }
     >
       <LinearGradient colors={["rgba(30, 30, 30, 0.95)", "rgba(20, 20, 20, 0.95)"]} style={styles.cardGradient}>
-        <Image
-          source={monsterImages[item.name]}
-          style={styles.monsterImage}
-          resizeMode="contain"
-        />
+        <View style={styles.imageWrapper}>
+          <Image
+            source={getMonsterImage(item.name)}
+            style={[styles.monsterImage, imageLoadingStates[item.id] && styles.hiddenImage]}
+            resizeMode="contain"
+            onLoadStart={() => handleImageLoadStart(item.id)}
+            onLoad={() => handleImageLoad(item.id)}
+            onError={() => handleImageError(item.id)}
+          />
+          {imageLoadingStates[item.id] && (
+            <View style={styles.imageLoadingContainer}>
+              <ThemedText>Loading...</ThemedText>
+            </View>
+          )}
+          {imageErrorStates[item.id] && (
+            <View style={styles.imageErrorContainer}>
+              <ThemedText>!</ThemedText>
+            </View>
+          )}
+        </View>
         <View style={styles.monsterInfo}>
           <ThemedText style={styles.monsterName}>{item.name}</ThemedText>
           <View style={styles.monsterDetails}>
@@ -312,7 +352,9 @@ export default function ExploreScreen() {
       <LinearGradient colors={["rgba(13, 17, 23, 0.95)", "rgba(13, 17, 23, 0.85)"]} style={styles.overlay} />
 
       <View style={styles.header}>
-        <ThemedText type="title" style={styles.title}>Monsters Guide</ThemedText>
+        <ThemedText type="title" style={styles.title}>
+          Monsters Guide
+        </ThemedText>
         <ThemedText style={styles.subtitle}>Hunt, Track, and Master</ThemedText>
       </View>
 
@@ -412,13 +454,42 @@ const styles = StyleSheet.create({
     padding: 15,
     alignItems: "center",
   },
-  monsterImage: {
+  imageWrapper: {
+    position: 'relative',
     width: 90,
     height: 90,
     backgroundColor: "#2A2A2A",
     borderWidth: 2,
     borderColor: "#FFD700",
     borderRadius: 10,
+    overflow: 'hidden',
+  },
+  monsterImage: {
+    width: '100%',
+    height: '100%',
+  },
+  hiddenImage: {
+    opacity: 0,
+  },
+  imageLoadingContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(42, 42, 42, 0.5)',
+  },
+  imageErrorContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(255, 0, 0, 0.1)',
   },
   monsterInfo: {
     flex: 1,
