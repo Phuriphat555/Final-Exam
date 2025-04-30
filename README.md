@@ -99,7 +99,20 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Expo team for the amazing framework
 - React Native community
 
+
 ## Contact
 
 Your Name - [@yourusername](https://twitter.com/yourusername)
 Project Link: [https://github.com/yourusername/monster-hunter-info](https://github.com/yourusername/monster-hunter-info)
+
+************************************************************************************************************************************************************************************************************************************************
+
+ขั้นตอนการติดตั้ง (Install Steps):
+ดาวน์โหลดไฟล์ [.apk](https://expo.dev/accounts/phuriphat_555/projects/monster-hunter-info/builds/3df8a9d0-f69e-494d-889c-0cd94618eb13)
+
+เปิดในอุปกรณ์ Android
+
+ติดตั้งผ่าน File Manager หรือ APK Installer
+
+กด "Allow unknown sources" หากมีการแจ้งเตือน
+
